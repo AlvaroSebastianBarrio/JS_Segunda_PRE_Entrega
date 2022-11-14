@@ -20,11 +20,11 @@ checkbox.addEventListener("change", validaCheckbox, false);
 function validaCheckbox(){
   var checked = checkbox.checked;
   if(checked){
-    alert('checkbox esta seleccionado');
+    //alert('checkbox esta seleccionado');
     a=1;
     return a;
   } else {
-    alert('checkbox NO esta seleccionado');
+    //alert('checkbox NO esta seleccionado');
     a=2;
     return a;
   }
