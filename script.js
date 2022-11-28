@@ -1,15 +1,16 @@
 
 var select = document.getElementById("select"),
     arr = [["JOSE PEREZ",170000],["PEDRO RAMOS",235000],["ALBERTO LOPEZ",390000]];
-
+    
     function insertar(){
         for (let i = 0; i< arr.length; i++){
         const elementos = document.getElementById("select")
         let htmlToInsert = "<option>"+arr[i][0]+"</option>"
         elementos.insertAdjacentHTML("beforeend",htmlToInsert)
-    
+        
         }
     }
+    
 insertar();
 
 
@@ -38,7 +39,7 @@ validaCheckbox();
 // calculo de porcentajes , deducciones y Sueldo NETO - Imprime en pantalla descuentos y sueldo Neto
 
 function Calcular(){
-      
+        
     let bruto = document.getElementById("SueldoBruto").value;
     let SueldosSinDeducciones = parseFloat(bruto);
     
@@ -52,12 +53,12 @@ function Calcular(){
     if(a === 2){
       
       let neto = SueldosSinDeducciones - (jubilacion + ObraSocial + PAMI );
-      document.write('<br>'+"NOMBRE EMPLEADO: "+document.getElementById("select").value+'<br>'+"Sueldo Bruto: $"+SueldosSinDeducciones + '<br>'+"Jubilacion: $"+jubilacion+ '<br>'+"Obra Social: $"+ObraSocial+ '<br>'+"Ley 19032 PAMI: $"+PAMI+ '<br>'+"NETO A COBRAR: $"+neto).innerHTML;
+      document.write('</br>'+'<h2>'+"Recibo de Sueldo:"+'</h2>'+'<br>'+"Nombre del Empleado: "+document.getElementById("select").value+'<br>'+'<hr style="width:70%;text-align:left;margin-left:0">'+"Sueldo Bruto: $"+SueldosSinDeducciones + '<br>'+'<hr style="width:50%;text-align:left;margin-left:0">'+"Jubilacion: $"+jubilacion+ '<br>'+'<hr style="width:50%;text-align:left;margin-left:0">'+"Obra Social: $"+ObraSocial+ '<br>'+'<hr style="width:50%;text-align:left;margin-left:0">'+"Ley 19032 PAMI: $"+PAMI+ '<br>'+'<hr style="width:50%;text-align:left;margin-left:0">'+'<h3>'+"NETO A COBRAR:"+'</h3>'+"$"+neto+'<br>').innerHTML;
     }
     if(a === 1){
       
       let neto = SueldosSinDeducciones - (jubilacion + ObraSocial + PAMI + sindicato);
-      document.write('<br>'+"NOMBRE EMPLEADO: "+document.getElementById("select").value+'<br>'+"Sueldo Bruto: $"+SueldosSinDeducciones + '<br>'+"Jubilacion: $"+jubilacion+ '<br>'+"Obra Social: $"+ObraSocial+ '<br>'+"Ley 19032 PAMI: $"+PAMI+ '<br>'+"Sindicato: $"+sindicato+ '<br>'+"NETO A COBRAR: $"+neto).innerHTML;
+      document.write('<br>'+'<h2>'+"Recibo de Sueldo:"+'</h2>'+'<br>'+"Nombre del Empleado: "+document.getElementById("select").value+'<br>'+'<hr style="width:70%;text-align:left;margin-left:0">'+"Sueldo Bruto: $"+SueldosSinDeducciones + '<br>'+'<hr style="width:50%;text-align:left;margin-left:0">'+"Jubilacion: $"+jubilacion+ '<br>'+'<hr style="width:50%;text-align:left;margin-left:0">'+"Obra Social: $"+ObraSocial+ '<br>'+'<hr style="width:50%;text-align:left;margin-left:0">'+"Ley 19032 PAMI: $"+PAMI+ '<br>'+'<hr style="width:50%;text-align:left;margin-left:0">'+"Sindicato: $"+sindicato+ '<br>'+'<hr style="width:50%;text-align:left;margin-left:0">'+'<h3>'+"NETO A COBRAR:"+'</h3>'+"$"+neto+'<br>').innerHTML;
       
     }
         
